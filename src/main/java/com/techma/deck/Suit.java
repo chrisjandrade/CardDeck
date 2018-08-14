@@ -1,5 +1,7 @@
 package com.techma.deck;
 
+import org.apache.commons.lang.StringUtils;
+
 /**
  * Enum which represents the suit of a card
  */
@@ -20,6 +22,13 @@ public enum Suit {
      */
     public String getValue() {
         return this.value;
+    }
+
+    /**
+     * Printable value of the suit
+     */
+    public String toString() {
+        return StringUtils.capitalize(this.value);
     }
 }
 

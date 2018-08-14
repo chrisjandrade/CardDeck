@@ -16,7 +16,8 @@ public class Deck {
      * Constructs the deck of cards
      */
     Deck() {
-        this.cards = new Card[NUM_CARDS];
+        int DECK_SIZE = NUM_CARDS;
+		this.cards = new Card[DECK_SIZE];
 
         for (Suit suit : Suit.values()) {
             for (Rank rank : Rank.values()) {
@@ -42,7 +43,7 @@ public class Deck {
             int ith = random.nextInt(this.numCards);
             int jth = random.nextInt(this.numCards);
 
-            swap(ith, jth);
+            this.swap(ith, jth);
         }
     }
 
@@ -83,12 +84,17 @@ public class Deck {
 
         deck.shuffle();
         for (int i = 0; i < 54; i++) {
+            StringBuilder output = new StringBuilder("Draw ");
+            output.append((i + 1) + "\t\t");
+
             Card card = deck.dealOneCard();
 
             if (card != null) {
-                System.out.println((i + 1) +": " + card.toString());
+                output.append(card.toString());
+                System.out.println(output.toString());
             } else {
-                System.out.println("No more cards to deal");
+                output.append("No more cards to be dealt");
+                System.out.println(output.toString());
             }
         }
 

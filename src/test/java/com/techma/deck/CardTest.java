@@ -68,6 +68,6 @@ public class CardTest {
   @Test
   public void testToString() {
     Card card = new Card(Rank.ACE, Suit.SPADES);
-    assertEquals("ace of spades", card.toString());
+    assertEquals("Ace of Spades", card.toString());
   }
 }

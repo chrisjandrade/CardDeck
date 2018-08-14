@@ -12,6 +12,8 @@ repositories {
 }
  
 dependencies {
+    compile group: 'org.apache.directory.studio', name: 'org.apache.commons.lang', version: '2.6'
+
     testCompileOnly(
             'junit:junit:4.12'
     )

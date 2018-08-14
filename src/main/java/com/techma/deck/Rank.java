@@ -18,6 +18,11 @@ public enum Rank {
     QUEEN(12),
     KING(13);
 
+    private static final int ACE_VALUE = 1;
+    private static final int JACK_VALUE = 11;
+    private static final int QUEEN_VALUE = 12;
+    private static final int KING_VALUE = 13;
+
     private Integer value;
 
     private Rank(Integer value) {
@@ -35,16 +40,16 @@ public enum Rank {
      * Retrieves the friendly string representation of the rank
      */
     public String toString() {
-        if (this.value == 1) {
-            return "ace";
-        } else if (this.value > 1 && this.value < 11) {
-            return this.value + "";
-        } else if (this.value == 11) {
-            return "jack";
-        } else if (this.value == 12) {
-            return "queen";
-        } else if (this.value == 13) {
-            return "king";
+        if (this.value == ACE_VALUE) {
+            return "Ace";
+        } else if (this.value > ACE_VALUE && this.value < JACK_VALUE) {
+            return this.value.toString();
+        } else if (this.value == JACK_VALUE) {
+            return "Jack";
+        } else if (this.value == QUEEN_VALUE) {
+            return "Queen";
+        } else if (this.value == KING_VALUE) {
+            return "King";
         }
 
         return "";

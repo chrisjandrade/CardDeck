@@ -7,6 +7,8 @@ import java.util.Objects;
  */
 public class Card implements Comparable<Card> {
 
+    private static final String _OF_ = " of ";
+
     private Rank rank;
     private Suit suit;
 
@@ -22,7 +24,7 @@ public class Card implements Comparable<Card> {
      * Retrieves the rank
      */
     public Rank getRank() {
-        return rank;
+        return this.rank;
     }
 
     /**
@@ -36,7 +38,7 @@ public class Card implements Comparable<Card> {
      * Gets the suit
      */
     public Suit getSuit() {
-        return suit;
+        return this.suit;
     }
 
     /**
@@ -60,20 +62,14 @@ public class Card implements Comparable<Card> {
      */
     @Override
     public int hashCode() {
-        return Objects.hash(rank, suit);
+        return Objects.hash(this.rank, this.suit);
     }
 
     /**
      * Compares the value of two playing cards
      */
     public int compareTo(Card that) {
-        if (this.rank.getValue().equals(that.getRank().getValue())) {
-            return 0;
-        } else if (this.rank.getValue() < that.getRank().getValue()) {
-            return -1;
-        } else {
-            return 1;
-        }
+        return this.rank.getValue().compareTo(that.getRank().getValue());
     }
 
     /**
@@ -82,8 +78,8 @@ public class Card implements Comparable<Card> {
     public String toString() {
         StringBuilder builder = new StringBuilder();
         builder.append(this.rank.toString());
-        builder.append(" of ");
-        builder.append(this.suit.getValue());
+        builder.append(_OF_);
+        builder.append(this.suit.toString());
 
         return builder.toString();
     }
