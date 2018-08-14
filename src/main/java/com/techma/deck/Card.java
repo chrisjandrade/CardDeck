@@ -48,5 +48,12 @@ public class Card implements Comparable<Card> {
             return 1;
         }
     }
+
+    public String toString() {
+        StringBuilder builder = new StringBuilder(this.rank.getValue());
+        builder.append(" of ").append(this.suit.getValue());
+
+        return builder.toString();
+    }
 }
 
