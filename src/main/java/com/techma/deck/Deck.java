@@ -7,15 +7,26 @@ public class Deck {
     private static final int NUM_CARDS = 52;
 
     private Card[] cards;
-    private int numCards = 52;
+    private int numCards = 0;
 
+    /**
+     * Constructs the deck of cards
+     */
     Deck() {
         this.cards = new Card[NUM_CARDS];
 
-        int i = 0;
         for (Suit suit : Suit.values()) {
-            for (Rank rank : Rank.values()) cards[i++] = new Card(rank, suit);
+            for (Rank rank : Rank.values()) {
+                cards[this.numCards++] = new Card(rank, suit);
+            }
         }
+    }
+
+    /**
+     * Returns the number of cards
+     */
+    public int getNumCards() {
+        return this.numCards;
     }
 
     /**
@@ -51,9 +62,9 @@ public class Deck {
      */
     public Card dealOneCard() {
         int index = this.numCards - 1;
-        this.numCards--;
 
         if (index >= 0) {
+            this.numCards--;
             return this.cards[index];
         } else {
             return null;
