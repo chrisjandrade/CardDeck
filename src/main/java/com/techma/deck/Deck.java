@@ -17,7 +17,7 @@ public class Deck {
      */
     Deck() {
         int DECK_SIZE = NUM_CARDS;
-		this.cards = new Card[DECK_SIZE];
+        this.cards = new Card[DECK_SIZE];
 
         for (Suit suit : Suit.values()) {
             for (Rank rank : Rank.values()) {
