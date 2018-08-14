@@ -1,4 +1,4 @@
-package main.java.com.techma.deck;
+package com.techma.deck;
 
 public enum Rank {
     ACE(1),
@@ -23,5 +23,21 @@ public enum Rank {
 
     public Integer getValue() {
         return this.value;
+    }
+
+    public String toString() {
+        if (this.value == 1) {
+            return "ace";
+        } else if (this.value > 1 && this.value < 11) {
+            return this.value + "";
+        } else if (this.value == 11) {
+            return "jack";
+        } else if (this.value == 12) {
+            return "queen";
+        } else if (this.value == 13) {
+            return "king";
+        }
+
+        return "";
     }
 }

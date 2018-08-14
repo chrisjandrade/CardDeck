@@ -1,4 +1,4 @@
-package main.java.com.techma.deck;
+package com.techma.deck;
 
 public enum Suit {
     HEARTS("hearts"),

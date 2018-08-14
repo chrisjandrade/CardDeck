@@ -1,4 +1,4 @@
-package main.java.com.techma.deck;
+package com.techma.deck;
 
 import java.util.Objects;
 
@@ -50,8 +50,10 @@ public class Card implements Comparable<Card> {
     }
 
     public String toString() {
-        StringBuilder builder = new StringBuilder(this.rank.getValue());
-        builder.append(" of ").append(this.suit.getValue());
+        StringBuilder builder = new StringBuilder();
+        builder.append(this.rank.toString());
+        builder.append(" of ");
+        builder.append(this.suit.getValue());
 
         return builder.toString();
     }

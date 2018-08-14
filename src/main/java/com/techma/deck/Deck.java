@@ -1,4 +1,4 @@
-package main.java.com.techma.deck;
+package com.techma.deck;
 
 import java.util.Random;
 
@@ -53,7 +53,7 @@ public class Deck {
         int index = this.numCards - 1;
         this.numCards--;
 
-        if (index > 0) {
+        if (index >= 0) {
             return this.cards[index];
         } else {
             return null;
@@ -69,7 +69,7 @@ public class Deck {
             Card card = deck.dealOneCard();
 
             if (card != null) {
-                System.out.println(i + " " + card.toString());
+                System.out.println((i + 1) +": " + card.toString());
             } else {
                 System.out.println("No more cards to deal");
             }

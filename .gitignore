@@ -1,0 +1,8 @@
+.classpath
+build
+bin
+.idea
+.gradle
+.settings
+.project
+CardDeck.iml
