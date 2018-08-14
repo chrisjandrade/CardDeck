@@ -1,5 +1,8 @@
 package com.techma.deck;
 
+/**
+ * Enum which represents the possible values of a card, ace through king
+ */
 public enum Rank {
     ACE(1),
     TWO(2),
@@ -21,10 +24,16 @@ public enum Rank {
         this.value = value;
     }
 
+    /**
+     * Retrieves the value
+     */
     public Integer getValue() {
         return this.value;
     }
 
+    /**
+     * Retrieves the friendly string representation of the rank
+     */
     public String toString() {
         if (this.value == 1) {
             return "ace";

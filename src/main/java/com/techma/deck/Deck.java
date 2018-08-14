@@ -2,6 +2,9 @@ package com.techma.deck;
 
 import java.util.Random;
 
+/**
+ * Class which represents a deck of cards
+ */
 public class Deck {
 
     private static final int NUM_CARDS = 52;
@@ -71,6 +74,9 @@ public class Deck {
         }
     }
 
+    /**
+     * Creates a deck of cards, shuffles them and deals them until there are no cards left
+     */
     public static void main(String args[]) {
 
         Deck deck = new Deck();

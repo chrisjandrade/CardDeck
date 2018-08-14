@@ -1,5 +1,8 @@
 package com.techma.deck;
 
+/**
+ * Enum which represents the suit of a card
+ */
 public enum Suit {
     HEARTS("hearts"),
     DIAMONDS("diamonds"),
@@ -12,6 +15,9 @@ public enum Suit {
         this.value = value;
     }
 
+    /**
+     * Represents the value of a suit
+     */
     public String getValue() {
         return this.value;
     }
